@@ -17,4 +17,16 @@ while (cont < listaDeTeclas.length) {
     };
 
     cont = cont + 1;
+
+    tecla.onkeydown = function (evento) {
+        //console.log(evento);
+
+        if (evento.code === "Space" || evento.code === "Enter") {
+            tecla.classList.add("ativa");
+        }
+    };
+
+    tecla.onkeyup = function () {
+        tecla.classList.remove("ativa");
+    };
 }
